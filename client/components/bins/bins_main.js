@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Bins } from './../../../imports/collections/bins';
+import BinsEditor from './bins_editor';
 
 class BinsMain extends Component {
     render() {
-        console.log(this.props.bin);
+
+        // Check to see if Bin has been passed in before we show it to editor
+        if(!this.props.bin) {
+            return(
+                <div>Loading...</div>
+            )
+        }
+
         return(
-            <div>BinsMain</div>
+            <div>
+                <BinsEditor bin={this.props.bin} />
+            </div>
         );
     }
 }

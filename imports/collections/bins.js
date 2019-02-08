@@ -11,9 +11,13 @@ Meteor.methods({
        });
    },
 
-   'bins.remove': function (bin) {
+   'bins.remove': function(bin) {
         return Bins.remove(bin);
-   }
+   },
+
+    'bins.update': function(bin, newContent) {
+        return Bins.update(bin._id, { $set: { content: newContent } });
+    }
 });
 
 
