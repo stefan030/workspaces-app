@@ -21,7 +21,7 @@ class Accounts extends Component {
 
     render() {
         return(
-            <div ref='container'>Accounts</div>
+            <div ref='container'></div>
         )
     }
 }
