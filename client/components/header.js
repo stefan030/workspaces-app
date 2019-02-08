@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Accounts from './accounts';
+import { Link } from 'react-router-dom';
 
 
 class Header extends Component {
@@ -15,9 +16,9 @@ class Header extends Component {
         return(
             <nav className="nav navbar-default">
                 <div className="navbar-header">
-                    <a className="navbar-brand">
+                    <Link to='/' className="navbar-brand">
                         Workspace
-                    </a>
+                    </Link>
                 </div>
                 <ul className="nav navbar-nav">
                     <li>

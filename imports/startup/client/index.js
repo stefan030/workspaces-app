@@ -12,8 +12,8 @@ import BinsList from './../../../client/components/bins/bins_list';
 const routes = (
   <BrowserRouter history={browserHistory}>
       <App>
-          <Route path='/bins' component={BinsMain} />
-          <Route path='/bins-list' component={BinsList} />
+          <Route exact path='/' component={BinsList} />
+          <Route path='/bins/:binId' component={BinsMain} />
       </App>
   </BrowserRouter>
 );
