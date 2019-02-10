@@ -30,6 +30,7 @@ export default createContainer((props) => {
     const { binId } = props.match.params;
 
     Meteor.subscribe('bins');
+    Meteor.subscribe('sharedBins');
 
     return { bin: Bins.findOne(binId) };
 
